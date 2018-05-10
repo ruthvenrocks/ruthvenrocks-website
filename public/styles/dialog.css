@@ -1,0 +1,31 @@
+/* Add to body when displaying dialog and remove when hiding. */
+.no-scroll {
+	overflow: hidden;
+}
+
+/* Display overlay dynamically */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+/* Set height and width as well as margin-top and margin-left dynamically. */
+.modal {
+    width: 300px;
+    height: 200px;
+    line-height: 200px;
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -150px;
+    background-color:#fff;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 11; /* 1px higher than the overlay layer */
+}

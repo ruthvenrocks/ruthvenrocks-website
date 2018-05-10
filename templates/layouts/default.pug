@@ -1,0 +1,85 @@
+include ../mixins/flash-messages
+
+doctype html
+html
+
+	//- HTML HEADER
+	head
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+
+		title= title || 'Ruthven Rocks'
+		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+
+		//- Customise the stylesheet for your site by editing /public/styles/site.sass
+		//- link(href="/styles/site.css", rel="stylesheet")
+		link(href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css", rel="stylesheet")
+
+		//- This file provides the default styling for the KeystoneJS Content Editor
+		if user && user.canAccessKeystone
+			link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
+
+		//- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+		//- Safely remove this block if you are not targeting IE8
+		//-[if lt IE 9]
+			script(src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js")
+			script(src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js")
+		//-[endif]
+
+		link(href="styles/dialog.css", rel="stylesheet")
+
+		//- Include template-specific stylesheets by extending the css block
+		block css
+
+		//- Add any other template-specific HEAD tags by extending the head block
+		block head
+
+	//- HTML BODY
+	body.w-100.sans-serif.bg-light-blue
+		if user
+			header.cf.w-100.pv2.bg-red.black
+				div.db.dt-ns.mw9.center.w-100
+					div.db.dtc-ns.v-mid.tl.w-50 Currently logged in as #{user.name.first} #{user.name.last}
+					nav.db.dtc-ns.v-mid.w-100.tl.tr-ns.mt2.mt0-ns
+						if user.canAccessKeystone
+							a(href='/keystone').pr3.black Open Keystone
+							a(href='/keystone/signout').black Sign Out
+
+		header.cf.w-100.pv3.bg-blue.shadow-1
+			div.db.dt-ns.mw8.center.w-100
+				div.db.dtc-ns.v-mid.tl.w-50.f3
+					a(href="/").link.black
+						span.b Ruthven 
+						span Rocks
+				nav.db.dtc-ns.v-mid.w-100.tl.tr-ns.mt2.mt0-ns.f4
+					a(href="/services").mr4.link.black.underline-hover.ttu Services
+					a(href="/gallery").mr4.link.black.underline-hover.ttu Gallery
+					a(href="/about").mr4.link.black.underline-hover.ttu About
+					a(href="/contact").link.black.underline-hover.ttu Contact
+
+		div.cf.w-100
+			main
+				block content
+
+		footer.cf.w-100.pv5.bg-light-blue
+			div.db.mw8.center.w-100
+				nav.fl.w-50
+					a(href="/services").mr4.link.black.underline-hover.ttu Services
+					a(href="/gallery").mr4.link.black.underline-hover.ttu Gallery
+					a(href="/about").mr4.link.black.underline-hover.ttu About
+					a(href="/contact").link.black.underline-hover.ttu Contact
+				div.fl.w-50.tr
+					h2.mt0 Ruthven Rocks
+				
+		div.overlay.dn
+			div.modal
+				some text
+
+
+		if user && user.canAccessKeystone
+		script(src='/js/bootstrap/bootstrap-3.3.5.min.js')
+			script(src='/js/jquery/jquery-1.11.3.min.js')
+			script(src='/keystone/js/content/editor.js')
+
+		block js
