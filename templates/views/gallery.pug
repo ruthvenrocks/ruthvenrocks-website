@@ -1,13 +1,12 @@
-extends ../layouts/default
+extends ../layouts/with-intro
 
-//- block intro
-//- 	.container
-//- 		h1 Gallery
-	
-block content
+block intro
+	h1 Look at the rocks
+	p We have a bunch of these things. Look at em!
+
+block main
 	div.w-100.bg-lightest-blue.pv4
 		div.db.dt-ns.mw9.center.w-100.ph5.tc
-			h1.tc Look at the rocks
 			div
 				div.fl.w-25.pa2
 					img(src="http://via.placeholder.com/352X352", alt="a rock")
