@@ -1,10 +1,10 @@
 extends ../layouts/with-intro
 
 block intro
-	h1 Bulk Sales
-	p Some descriptive text
+	h1= section.subheading
+	p=  section.description
 
 block main
 	div.w-100.bg-lightest-blue.pv4
-		div.db.dt-ns.mw9.center.w-100.ph5
-			p Lorem ipsum dolor sit amet consectetur adipiscing elit praesent ut, scelerisque torquent suspendisse porta in nulla mollis aliquet. Quis blandit mattis a turpis urna rhoncus nisl ridiculus quam, nec mauris litora commodo purus nascetur elementum eleifend, euismod fringilla rutrum curae lacinia proin enim lobortis. Ac dapibus accumsan eu augue interdum hendrerit dis id tincidunt libero varius, donec vel fermentum consequat senectus semper purus inceptos massa. 
+		div.db.dt-ns.mw9.center.w-100.ph5 !{section.body}
+
