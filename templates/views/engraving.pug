@@ -1,0 +1,10 @@
+extends ../layouts/with-intro
+
+block intro
+	h1= section.subheading
+	p=  section.description
+
+block main
+	div.w-100.bg-lightest-blue.pv4
+		div.db.dt-ns.mw9.center.w-100.ph5 !{section.body}
+

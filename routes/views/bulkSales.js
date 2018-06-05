@@ -7,7 +7,7 @@ exports = module.exports = function (req, res) {
 
 	view.on('init', function(next) {
 		var q = ContentSection.model
-			.findOne({ key: 'services' });
+			.findOne({ key: 'bulk-sales' });
 
 		q.exec(function(err, result) {
 			locals.section = result;
@@ -15,11 +15,5 @@ exports = module.exports = function (req, res) {
 		});
 	});
 
-	// view.query('servicesDescription',
-	// 	ContentSection.model
-	// 		.findOne({ key: 'services-content' })
-	// );
-
-	view.render('services');
-
+	view.render('bulk-sales');
 };

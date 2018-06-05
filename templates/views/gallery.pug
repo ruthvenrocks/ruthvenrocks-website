@@ -8,34 +8,36 @@ block main
 	div.w-100.bg-lightest-blue.pv4
 		div.db.dt-ns.mw9.center.w-100.ph5.tc
 			div
-				div.fl.w-25.pa2
-					img(src="http://via.placeholder.com/352X352", alt="a rock")
-				div.fl.w-25.pa2
-					img(src="http://via.placeholder.com/352X352", alt="a rock")
-				div.fl.w-25.pa2
-					img(src="http://via.placeholder.com/352X352", alt="a rock")
-				div.fl.w-25.pa2
-					img(src="http://via.placeholder.com/352X352", alt="a rock")
-				div.fl.w-25.pa2
-					img(src="http://via.placeholder.com/352X352", alt="a rock")
-				div.fl.w-25.pa2
-					img(src="http://via.placeholder.com/352X352", alt="a rock")
-				div.fl.w-25.pa2
-					img(src="http://via.placeholder.com/352X352", alt="a rock")
-				div.fl.w-25.pa2
-					img(src="http://via.placeholder.com/352X352", alt="a rock")
-				div.fl.w-25.pa2
-					img(src="http://via.placeholder.com/352X352", alt="a rock")
-				div.fl.w-25.pa2
-					img(src="http://via.placeholder.com/352X352", alt="a rock")
-				div.fl.w-25.pa2
-					img(src="http://via.placeholder.com/352X352", alt="a rock")
-				div.fl.w-25.pa2
-					img(src="http://via.placeholder.com/352X352", alt="a rock")
-				div.fl.w-25.pa2
-					img(src="http://via.placeholder.com/352X352", alt="a rock")
-				div.fl.w-25.pa2
-					img(src="http://via.placeholder.com/352X352", alt="a rock")
+				each rockListing, i in rockListings
+					div.fl.w-25.pa2
+						img(src="http://via.placeholder.com/352X352", alt=rockListing.title)
+
+				//- div.fl.w-25.pa2
+				//- 	img(src="http://via.placeholder.com/352X352", alt="a rock")
+				//- div.fl.w-25.pa2
+				//- 	img(src="http://via.placeholder.com/352X352", alt="a rock")
+				//- div.fl.w-25.pa2
+				//- 	img(src="http://via.placeholder.com/352X352", alt="a rock")
+				//- div.fl.w-25.pa2
+				//- 	img(src="http://via.placeholder.com/352X352", alt="a rock")
+				//- div.fl.w-25.pa2
+				//- 	img(src="http://via.placeholder.com/352X352", alt="a rock")
+				//- div.fl.w-25.pa2
+				//- 	img(src="http://via.placeholder.com/352X352", alt="a rock")
+				//- div.fl.w-25.pa2
+				//- 	img(src="http://via.placeholder.com/352X352", alt="a rock")
+				//- div.fl.w-25.pa2
+				//- 	img(src="http://via.placeholder.com/352X352", alt="a rock")
+				//- div.fl.w-25.pa2
+				//- 	img(src="http://via.placeholder.com/352X352", alt="a rock")
+				//- div.fl.w-25.pa2
+				//- 	img(src="http://via.placeholder.com/352X352", alt="a rock")
+				//- div.fl.w-25.pa2
+				//- 	img(src="http://via.placeholder.com/352X352", alt="a rock")
+				//- div.fl.w-25.pa2
+				//- 	img(src="http://via.placeholder.com/352X352", alt="a rock")
+				//- div.fl.w-25.pa2
+				//- 	img(src="http://via.placeholder.com/352X352", alt="a rock"
 
 	//- .container
 	//- 	if galleries.length
