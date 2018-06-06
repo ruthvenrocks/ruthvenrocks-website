@@ -46,17 +46,22 @@ html
 							a(href='/keystone/signout').black Sign Out
 
 		header(v-hideable-nav)#header-nav.cf.w-100.pv3.shadow-1.bg-blue
-			div.db.dt-ns.ph3.center.w-100
-				div.db.dtc-ns.v-mid.tl.w-100.w-30-ns.f3
+			div.db.dt-ns.ph3.center.w-100.vmid
+				//- div.db.dtc-ns.v-mid.tl.w-100.w-90-m.w-30-ns.f3
+				div.dib.fl.f3
 					a(href="/").link.black
 						span.b.navy Ruthven 
 						span.navy Rocks
-				nav.dn.dn-m.db-ns.v-mid.w-100.tl.tr-ns.mt2.mt0-ns.f6.pt1
+				nav.dn.dn-m.dib-ns.fr.tr.pt2.f6
 					a(href="/engraving").mr4.link.navy.underline-hover.ttu Engraving
 					a(href="/bulk-sales").mr4.link.navy.underline-hover.ttu Bulk Sales
 					a(href="/unique-boulders").mr4.link.navy.underline-hover.ttu Unique Boulders
 					a(href="/specialty-work").mr4.link.navy.underline-hover.ttu Specialty Work
 					a(href="/contact").link.navy.underline-hover.ttu Contact Us
+				
+				nav.dib.dib-m.dn-ns.fr.tr
+					a(href="/contact").link.navy
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
 
 		div.cf.w-100.bg-white
 			main
