@@ -2,7 +2,7 @@ var keystone = require('keystone');
 // var Types = keystone.Field.Types;
 
 var RockListing = new keystone.List('RockListing', {
-	autokey: { from: 'name', path: 'key', unique: true },
+	autokey: { from: 'title', path: 'key', unique: true },
 });
 
 RockListing.add({
